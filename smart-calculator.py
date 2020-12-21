@@ -37,6 +37,15 @@ def HCF(a, b):
         H -= 1
 
 
+operations = {
+    'ADD': add, 'ADDITION': add, 'SUM': add, 'PLUS': add,
+    'SUB': subtract, 'DIFFERENCE': subtract, 'MINUS': subtract, 'SUBTRACT': subtract,
+    'LCM': LCM, 'HCF': HCF,
+    'PRODUCT': multiply, 'MULTIPLICATION': multiply,
+    'DIV': divide, 'DIVISION': divide,
+    'MOD': mod, 'REMAINDER': mod, 'MODULUS': mod
+}
+
 win = Tk()
 
 win.geometry("500x300")
