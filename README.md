@@ -1,1 +1,1 @@
-# Smart-Calculator
+# Smart Calculator
