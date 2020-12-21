@@ -20,12 +20,15 @@ l3.place(x=170, y=130)
 
 textIn = StringVar()
 e1 = Entry(win, width=50, text="Enter Here", textvariable=textIn)
+e1.configure(fg="black", bg='white')
 e1.place(x=100, y=165)
 
 b1 = Button(win, text="Just This")
+b1.configure(fg="black", bg='white')
 b1.place(x=215, y=200)
 
 listBox = Listbox(win, width=30, height=3)
+listBox.configure(fg="black", bg='white')
 listBox.place(x=150, y=230)
 
 win.mainloop()
