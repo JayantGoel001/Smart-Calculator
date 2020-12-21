@@ -37,6 +37,35 @@ def HCF(a, b):
         H -= 1
 
 
+def extractNumbers(text):
+    listOfNumbers = []
+    for t in text.split():
+        try:
+            listOfNumbers.append(float(t))
+        except ValueError:
+            pass
+    return listOfNumbers
+
+
+def calculate():
+    text = textIn.get()
+    listOfNumbers = extractNumbers(text)
+    for word in text.split():
+        if word.upper() in operations.keys():
+            try:
+                result = operations[word.upper()](listOfNumbers[0], listOfNumbers[1])
+                listBox.delete(0, END)
+                listBox.insert(END, result)
+            except ValueError:
+                listBox.delete(0, END)
+                listBox.insert(END, "Something Went Wrong!!")
+            finally:
+                break
+        else:
+            listBox.delete(0, END)
+            listBox.insert(END, "Something Went Wrong!!")
+
+
 operations = {
     'ADD': add, 'ADDITION': add, 'SUM': add, 'PLUS': add,
     'SUB': subtract, 'DIFFERENCE': subtract, 'MINUS': subtract, 'SUBTRACT': subtract,
@@ -69,7 +98,7 @@ e1 = Entry(win, width=50, text="Enter Here", textvariable=textIn)
 e1.configure(fg="black", bg='white')
 e1.place(x=100, y=165)
 
-b1 = Button(win, text="Just This")
+b1 = Button(win, text="Just This", command=calculate)
 b1.configure(fg="black", bg='white')
 b1.place(x=215, y=200)
 
