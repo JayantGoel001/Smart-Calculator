@@ -70,8 +70,8 @@ operations = {
     'ADD': add, 'ADDITION': add, 'SUM': add, 'PLUS': add,
     'SUB': subtract, 'DIFFERENCE': subtract, 'MINUS': subtract, 'SUBTRACT': subtract,
     'LCM': LCM, 'HCF': HCF,
-    'PRODUCT': multiply, 'MULTIPLICATION': multiply,
-    'DIV': divide, 'DIVISION': divide,
+    'PRODUCT': multiply, 'MULTIPLICATION': multiply, 'MUL': multiply,
+    'DIV': divide, 'DIVISION': divide, 'DIVIDE': divide,
     'MOD': mod, 'REMAINDER': mod, 'MODULUS': mod
 }
 
@@ -79,7 +79,7 @@ win = Tk()
 
 win.geometry("500x300")
 win.title("Smart Calculator")
-win.configure(bg='black')
+win.configure(bg='lightskyblue')
 
 l1 = Label(win, text="I am a Smart Calculator", width=30, padx=3)
 l1.configure(fg="black", bg='white', font=("Bold", 11))
